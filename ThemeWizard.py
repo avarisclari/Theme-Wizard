@@ -2,8 +2,8 @@
 import wx
 import random
 
-adjectives=[]
-locations=[]
+adjectives=open("adjectives.txt").readlines()
+locations=open("locations.txt").readlines()
 
 
 class appender(wx.Frame):
@@ -34,12 +34,9 @@ class appender(wx.Frame):
             locations.append(box2.GetValue())
             
     def generatetheme(self, event):
-        font=wx.Font(18, wx.DEFAULT, wx.NORMAL, wx.BOLD, underline=True, faceName="", encoding=wx.FONTENCODING_DEFAULT)
-
         yourtheme = random.choice(adjectives) + ' ' + random.choice(locations)
-        output=wx.StaticText(self.panel,-1, yourtheme,(90,135),(260,-1),wx.ALIGN_CENTER)
-        output.SetFont(font)
-    
+        output=wx.MessageDialog(None, yourtheme, 'Theme')
+        output.ShowModal()
     
     def closewindow(self, event):
         self.Destroy()

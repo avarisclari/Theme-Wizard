@@ -1,0 +1,8 @@
+House
+City
+Wilderness
+Castle
+Space
+Planet
+Ocean
+Underground
