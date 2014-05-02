@@ -8,7 +8,7 @@ locations=[]
 
 class appender(wx.Frame):
     def __init__(self,parent,id):
-        wx.Frame.__init__(self,parent,id,'Theme Generator', size=(200,300))
+        wx.Frame.__init__(self,parent,id,'Theme Wizard', size=(200,300))
         
         self.panel=wx.Panel(self)
         
