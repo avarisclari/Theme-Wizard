@@ -8,14 +8,14 @@ locations=[]
 
 class appender(wx.Frame):
     def __init__(self,parent,id):
-        wx.Frame.__init__(self,parent,id,'Theme Wizard', size=(200,300))
+        wx.Frame.__init__(self,parent,id,'Theme Wizard', size=(300,160))
         
         self.panel=wx.Panel(self)
         
         
         adjective=wx.Button(self.panel,label='Add Ajective',pos=(10,10),size=(130,60))
-        location=wx.Button(self.panel,label='Add Location',pos=(10,100),size=(130,60))
-        generate=wx.Button(self.panel,label='Generate Theme',pos=(10,190),size=(130,60))
+        location=wx.Button(self.panel,label='Add Location',pos=(140,10),size=(130,60))
+        generate=wx.Button(self.panel,label='Generate Theme',pos=(75,70),size=(130,60))
         
         self.Bind(wx.EVT_BUTTON, self.addajective, adjective)
         self.Bind(wx.EVT_BUTTON, self.addlocation, location)
@@ -37,7 +37,7 @@ class appender(wx.Frame):
         font=wx.Font(18, wx.DEFAULT, wx.NORMAL, wx.BOLD, underline=True, faceName="", encoding=wx.FONTENCODING_DEFAULT)
 
         yourtheme = random.choice(adjectives) + ' ' + random.choice(locations)
-        output=wx.StaticText(self.panel,-1, yourtheme,(10,250),(260,-1),wx.ALIGN_CENTER)
+        output=wx.StaticText(self.panel,-1, yourtheme,(90,135),(260,-1),wx.ALIGN_CENTER)
         output.SetFont(font)
     
     
